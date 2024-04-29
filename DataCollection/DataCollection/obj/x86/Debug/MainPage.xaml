@@ -1,0 +1,36 @@
+﻿<Page
+    x:Class="DataCollection.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:DataCollection"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" Height="796" Width="1052" VerticalAlignment="Top" Background="{ThemeResource AppBarBackgroundThemeBrush}">
+
+    <Grid Width="900" Margin="76,10,76,0">
+
+        <Button x:ConnectionId='2' x:Name="startCollectingBtn" Content="Start Collecting" Margin="334,281,0,0" VerticalAlignment="Top"                                 />
+        <Button x:ConnectionId='3' x:Name="stopCollectingBtn" Content="Stop Collecting" Margin="486,281,0,0" VerticalAlignment="Top"                                />
+        <Button x:ConnectionId='4' x:Name="getHistoryBtn" Content="Get Measurement History" Margin="377,406,0,0" VerticalAlignment="Top"                            />
+
+        <TextBox x:ConnectionId='5' x:Name="mostRecentLabel" HorizontalAlignment="Left" Margin="114,168,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="188" IsReadOnly="True" FontFamily="Arial"/>
+        <TextBox x:ConnectionId='6' x:Name="unitsLabel" HorizontalAlignment="Left" Margin="334,168,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="112" IsReadOnly="True" FontFamily="Arial"/>
+        <TextBox x:ConnectionId='7' x:Name="timeStampLabel" HorizontalAlignment="Left" Margin="486,168,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="128" IsReadOnly="True" FontFamily="Arial"/>
+        <TextBox x:ConnectionId='8' x:Name="historyLabel" HorizontalAlignment="Left" Margin="114,406,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Height="326" Width="214" IsReadOnly="True" FontFamily="Arial"/>
+
+        <TextBlock HorizontalAlignment="Left" Margin="114,136,0,0" Text="Most Recent Measurement" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Arial"/>
+        <TextBlock HorizontalAlignment="Left" Margin="114,87,0,0" Text="Please select which units you would like your measurements reported in and click &quot;Start Collecting&quot;" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16" FontFamily="Times New Roman"/>
+        <TextBlock HorizontalAlignment="Left" Margin="334,136,0,0" Text="Units" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Arial"/>
+        <TextBlock HorizontalAlignment="Left" Margin="486,136,0,0" Text="Timestamp" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Arial"/>
+        <TextBlock HorizontalAlignment="Left" Margin="114,223,0,0" Text="Select Units" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Arial"/>
+        <TextBlock HorizontalAlignment="Left" Margin="114,343,0,0" Text="If you wish to see the measurement history please click the &quot;Measurement History&quot; button.   History will be displayed in inches." TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Times New Roman" FontSize="16" Width="595"/>
+        <TextBlock HorizontalAlignment="Left" Margin="114,0,0,0" Text="Measurement History" TextWrapping="Wrap" VerticalAlignment="Center" FontFamily="Arial"/>
+
+        <StackPanel x:ConnectionId='9' x:Name="buttonGroup" Margin="114,244,598,473">
+            <RadioButton x:ConnectionId='10' x:Name="metricRadio" Content="centimeters (Metric)" FontFamily="Arial" IsChecked="True"                               GroupName="unitsGroup" Width="162"/>
+            <RadioButton x:ConnectionId='11' x:Name="imperialRadio" Content="inches (Imperial)"                                 GroupName="unitsGroup"/>
+        </StackPanel>
+
+    </Grid>
+</Page>
+

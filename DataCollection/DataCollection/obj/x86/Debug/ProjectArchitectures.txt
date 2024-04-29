@@ -1,0 +1,1 @@
+C:\Users\LunchBox\Desktop\DataCollection\DataCollection\DataCollection\DataCollector.csproj;x86
